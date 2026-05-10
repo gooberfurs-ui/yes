@@ -1,0 +1,18 @@
+# Visual Studio files
+.vs/
+.vscode/
+*.vsidx
+
+# IDE
+.sixth/
+
+# Node modules (if applicable)
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local

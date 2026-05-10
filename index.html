@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoodDoggoLuna — Official Site</title>
+  <meta name="description" content="Hi, I'm GoodDoggoLuna. This is my soft blue little corner of the internet for my TikTok, my VRChat avatar work, and the conventions I love going to every year." />
+  <meta name="theme-color" content="#06101f" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preload" href="assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "GoodDoggoLuna",
+      "alternateName": "Luna",
+      "description": "TikTok creator, VRChat avatar creator, and convention regular.",
+      "sameAs": [
+        "https://www.tiktok.com/@GoodDoggoLuna",
+        "https://www.instagram.com/GoodDoggoLuna/",
+        "https://x.com/GoodDoggoLuna",
+        "https://www.youtube.com/@GoodDoggoLuna",
+        "https://www.twitch.tv/GoodDoggoLuna",
+        "https://bsky.app/profile/gooddoggoluna.bsky.social"
+      ]
+    }
+  </script>
+</head>
+<body>
+  <canvas id="skyCanvas" aria-hidden="true"></canvas>
+  <div class="sky-glow sky-glow-left" aria-hidden="true"></div>
+  <div class="sky-glow sky-glow-right" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="GoodDoggoLuna home">
+      <span class="brand-mark"><i class="fa-solid fa-moon"></i></span>
+      <span class="brand-text">GoodDoggoLuna</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">About me</a>
+      <a href="#work">What I love making</a>
+      <a href="#events">Cons</a>
+      <a href="#socials">My socials</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          welcome to my little space
+        </span>
+
+        <h1>
+          <span class="gradient-text">GoodDoggoLuna</span>
+        </h1>
+
+        <p class="hero-lead">
+          Hi, I’m Luna. This site is my soft blue corner of the internet where I can share the things I care about most:
+          my TikTok, my VRChat avatar work, the conventions I look forward to every year, and a version of myself that
+          feels warm, honest, and real.
+        </p>
+
+        <div class="hero-rotator">
+          <span class="rotator-label">Lately I’ve been</span>
+          <span class="rotator" id="roleRotator" aria-live="polite">making videos on TikTok</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#work">
+            <i class="fa-solid fa-star"></i>
+            Come look around
+          </a>
+          <a class="button secondary" href="#socials">
+            <i class="fa-solid fa-link"></i>
+            Find me online
+          </a>
+        </div>
+
+        <div class="hero-notes">
+          <div class="info-chip glass-card">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>I make TikToks</span>
+          </div>
+          <div class="info-chip glass-card">
+            <i class="fa-solid fa-vr-cardboard"></i>
+            <span>I create VRChat avatars</span>
+          </div>
+          <div class="info-chip glass-card">
+            <i class="fa-solid fa-ticket"></i>
+            <span>I go to Furality, FurSquared, MFF, and AquatiFur</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card-wrap" data-reveal>
+        <div class="profile-card glass-card tilt-card" data-tilt>
+          <div class="profile-head">
+            <img src="assets/img/luna-avatar.jpg" alt="GoodDoggoLuna profile avatar" class="avatar" />
+            <div>
+              <p class="profile-kicker">@GoodDoggoLuna</p>
+              <h2>GoodDoggoLuna</h2>
+              <p class="profile-subtitle">A sweet, starry, blue little space that feels like me.</p>
+            </div>
+          </div>
+
+          <div class="live-card">
+            <div class="live-card-top">
+              <div>
+                <p class="counter-label">My TikTok followers</p>
+                <strong id="followerCount">22.5K</strong>
+              </div>
+              <span class="live-pill" id="counterStatus">checking live</span>
+            </div>
+
+            <div class="counter-actions">
+              <button class="button tertiary small-button" id="refreshCounterButton" type="button">
+                <i class="fa-solid fa-rotate-right"></i>
+                Refresh count
+              </button>
+              <span class="counter-meta" id="counterMeta">Loading TikTok data…</span>
+            </div>
+
+            <div class="counter-bar" aria-hidden="true">
+              <span id="counterBarFill"></span>
+            </div>
+          </div>
+
+          <div class="quick-stats">
+            <div class="stat-box">
+              <span class="stat-number" id="videoCount">89</span>
+              <span class="stat-label">videos</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" id="likesCount">11.7K</span>
+              <span class="stat-label">likes</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">4</span>
+              <span class="stat-label">cons every year</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading" data-reveal>
+        <span class="section-tag">About me</span>
+        <h2>I wanted this to feel gentle, honest, and easy to be in</h2>
+        <p>
+          I didn’t want a stiff portfolio. I wanted something that sounds like me and feels kind.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="glass-card about-card tilt-card" data-tilt data-reveal>
+          <h3><i class="fa-solid fa-paw"></i> The heart of it</h3>
+          <p>
+            I’m Luna, and a lot of people know me from TikTok. I also put a lot of love into creating avatars for VRChat.
+            I’m drawn to things that feel expressive, playful, dreamy, and full of personality, so I wanted my site to feel
+            that way too.
+          </p>
+          <ul class="list-clean">
+            <li><i class="fa-solid fa-check"></i> I create under @GoodDoggoLuna</li>
+            <li><i class="fa-solid fa-check"></i> I make content and I make avatars</li>
+            <li><i class="fa-solid fa-check"></i> I keep coming back to the con scene every year</li>
+          </ul>
+        </article>
+
+        <article class="glass-card about-card tilt-card" data-tilt data-reveal>
+          <h3><i class="fa-solid fa-heart"></i> I care about being real</h3>
+          <p>
+            I’m open about living with bipolar disorder, ADHD, anxiety, and other mental health struggles because I don’t
+            want to pretend I’m untouched by any of it. I’d rather be honest, soft, and sincere than sound perfect.
+            The people who find comfort in that honesty matter a lot to me.
+          </p>
+          <blockquote>
+            I want this to feel like a place where people can breathe a little, smile a little, and feel close to me.
+          </blockquote>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-heading" data-reveal>
+        <span class="section-tag">What I love making</span>
+        <h2>These are the parts of me I wanted to share here</h2>
+        <p>
+          You can tap through these to get a feel for what I do and what means the most to me.
+        </p>
+      </div>
+
+      <div class="interactive-block glass-card" data-reveal>
+        <div class="tab-row" role="tablist" aria-label="My focus areas">
+          <button class="tab active" data-tab="tiktok" role="tab" aria-selected="true">
+            <i class="fa-brands fa-tiktok"></i>
+            TikTok
+          </button>
+          <button class="tab" data-tab="vrchat" role="tab" aria-selected="false">
+            <i class="fa-solid fa-vr-cardboard"></i>
+            VRChat
+          </button>
+          <button class="tab" data-tab="cons" role="tab" aria-selected="false">
+            <i class="fa-solid fa-ticket"></i>
+            Con life
+          </button>
+          <button class="tab" data-tab="personal" role="tab" aria-selected="false">
+            <i class="fa-solid fa-moon"></i>
+            My heart
+          </button>
+        </div>
+
+        <div class="focus-panel" id="focusPanel" tabindex="0">
+          <div class="focus-icon"><i class="fa-brands fa-tiktok"></i></div>
+          <div>
+            <p class="panel-kicker">TikTok</p>
+            <h3>TikTok is one of the biggest places I get to be myself</h3>
+            <p>
+              A lot of people meet me there first. It’s where my energy, my humor, and my style all come together in a way
+              that feels very naturally me.
+            </p>
+            <ul class="panel-points">
+              <li>This site can pull my follower count from my public TikTok page when it’s deployed</li>
+              <li>I wanted everything here to stay centered around @GoodDoggoLuna</li>
+              <li>I tried to make this feel personal and cozy instead of cold or corporate</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid three-up">
+        <article class="glass-card feature-card tilt-card" data-tilt data-reveal>
+          <div class="feature-icon"><i class="fa-brands fa-tiktok"></i></div>
+          <h3>TikTok</h3>
+          <p>This is where a lot of people find me first, and where I get to share a lot of my personality.</p>
+        </article>
+        <article class="glass-card feature-card tilt-card" data-tilt data-reveal>
+          <div class="feature-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+          <h3>VRChat avatars</h3>
+          <p>I love making avatars that feel expressive, cute, polished, and full of their own little spark.</p>
+        </article>
+        <article class="glass-card feature-card tilt-card" data-tilt data-reveal>
+          <div class="feature-icon"><i class="fa-solid fa-cloud-moon"></i></div>
+          <h3>My vibe</h3>
+          <p>I wanted a soft blue night-sky feeling, because that feels comforting and closest to my heart.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="events">
+      <div class="section-heading" data-reveal>
+        <span class="section-tag">Cons I love</span>
+        <h2>These are the conventions I keep coming back to every year</h2>
+        <p>
+          They’re a real part of my life, and they mean a lot to me.
+        </p>
+      </div>
+
+      <div class="card-grid four-up">
+        <article class="glass-card event-card tilt-card" data-tilt data-reveal>
+          <div class="event-top">
+            <span class="event-icon"><i class="fa-solid fa-globe"></i></span>
+            <span class="event-pill">every year</span>
+          </div>
+          <h3>Furality</h3>
+          <p>Furality feels really close to the VR side of me, and I always love having it in my year.</p>
+        </article>
+        <article class="glass-card event-card tilt-card" data-tilt data-reveal>
+          <div class="event-top">
+            <span class="event-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="event-pill">every year</span>
+          </div>
+          <h3>FurSquared</h3>
+          <p>FurSquared is one of those cons that just feels familiar and good to come back to.</p>
+        </article>
+        <article class="glass-card event-card tilt-card" data-tilt data-reveal>
+          <div class="event-top">
+            <span class="event-icon"><i class="fa-solid fa-building"></i></span>
+            <span class="event-pill">every year</span>
+          </div>
+          <h3>MFF</h3>
+          <p>MFF is such a big part of con life for me, and it always deserves a place here.</p>
+        </article>
+        <article class="glass-card event-card tilt-card" data-tilt data-reveal>
+          <div class="event-top">
+            <span class="event-icon"><i class="fa-solid fa-water"></i></span>
+            <span class="event-pill">every year</span>
+          </div>
+          <h3>AquatiFur</h3>
+          <p>AquatiFur is another one I keep coming back to, and it feels right having it as part of my story.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="socials">
+      <div class="section-heading" data-reveal>
+        <span class="section-tag">My socials</span>
+        <h2>If you want to keep up with me, here’s where I am</h2>
+        <p>
+          Same name, same little blue vibe, all in one place.
+        </p>
+      </div>
+
+      <div class="social-layout">
+        <div class="social-grid" data-reveal>
+          <a class="social-card glass-card tilt-card" data-tilt href="https://www.tiktok.com/@GoodDoggoLuna" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-tiktok"></i>
+            <span><strong>TikTok</strong><small>@GoodDoggoLuna</small></span>
+          </a>
+          <a class="social-card glass-card tilt-card" data-tilt href="https://www.instagram.com/GoodDoggoLuna/" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+            <span><strong>Instagram</strong><small>@GoodDoggoLuna</small></span>
+          </a>
+          <a class="social-card glass-card tilt-card" data-tilt href="https://x.com/GoodDoggoLuna" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span><strong>X / Twitter</strong><small>@GoodDoggoLuna</small></span>
+          </a>
+          <a class="social-card glass-card tilt-card" data-tilt href="https://www.youtube.com/@GoodDoggoLuna" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-youtube"></i>
+            <span><strong>YouTube</strong><small>@GoodDoggoLuna</small></span>
+          </a>
+          <a class="social-card glass-card tilt-card" data-tilt href="https://www.twitch.tv/GoodDoggoLuna" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-twitch"></i>
+            <span><strong>Twitch</strong><small>@GoodDoggoLuna</small></span>
+          </a>
+          <a class="social-card glass-card tilt-card" data-tilt href="https://bsky.app/profile/gooddoggoluna.bsky.social" target="_blank" rel="noreferrer">
+            <i class="fa-solid fa-cloud"></i>
+            <span><strong>Bluesky</strong><small>@gooddoggoluna.bsky.social</small></span>
+          </a>
+        </div>
+
+        <aside class="glass-card social-side tilt-card" data-tilt data-reveal>
+          <h3><i class="fa-solid fa-at"></i> My main handle</h3>
+          <p>
+            If you ever need to look me up, this is usually the name to remember.
+          </p>
+          <div class="handle-box">
+            <span id="handleText">@GoodDoggoLuna</span>
+            <button class="button tertiary small-button" id="copyHandleButton" type="button">
+              <i class="fa-regular fa-copy"></i>
+              Copy
+            </button>
+          </div>
+          <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Thanks for visiting my little starry corner of the internet <span class="gradient-text inline-gradient">— Luna</span>.</p>
+    <p class="footer-note">My TikTok count updates through a server-side route, so it can stay live when the site is deployed even if preview mode falls back to the saved snapshot.</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/tiktok-followers.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="28" fill="#07111f"/>
+  <circle cx="64" cy="64" r="42" fill="url(#g)" opacity="0.18"/>
+  <path d="M84 64c0 16.569-13.431 30-30 30-10.531 0-20.194-5.437-25.558-14.422 3.931 2.658 8.661 4.211 13.755 4.211 13.531 0 24.5-10.969 24.5-24.5 0-10.262-6.306-19.052-15.249-22.694A29.844 29.844 0 0 1 54 34c16.569 0 30 13.431 30 30Z" fill="url(#moon)"/>
+  <path d="M89 35l2.688 8.312L100 46l-8.312 2.688L89 57l-2.688-8.312L78 46l8.312-2.688L89 35Z" fill="#B8EEFF"/>
+  <defs>
+    <linearGradient id="g" x1="22" y1="20" x2="100" y2="108" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#74D6FF"/>
+      <stop offset="1" stop-color="#8B93FF"/>
+    </linearGradient>
+    <linearGradient id="moon" x1="24" y1="30" x2="89" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5DE4FF"/>
+      <stop offset="0.55" stop-color="#8BA4FF"/>
+      <stop offset="1" stop-color="#B5F1FF"/>
+    </linearGradient>
+  </defs>
+</svg>
